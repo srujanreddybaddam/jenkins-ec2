@@ -1,0 +1,15 @@
+stages:
+  - build
+  - deploy
+
+build:
+  stages: build
+    - script:
+      - terraform --version
+      - terraform init
+      - terraform plan
+
+deploy:
+  stages: deploy
+    - script:
+      - terraform apply
