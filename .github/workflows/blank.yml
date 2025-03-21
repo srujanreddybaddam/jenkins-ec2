@@ -19,6 +19,11 @@ jobs:
       with:
         terraform_version: '1.4.0'  # Specify the Terraform version you want
 
+    - name: Set AWS Credentials
+      run: echo "AWS_ACCESS_KEY=${{ secrets.AWS_ACCESS_KEY}}" >> $GITHUB_ENV
+    - name: Set AWS Secret Key
+      run: echo "AWS_SECRET_KEY=${{ secrets.AWS_SECRET_KEY }}" >> $GITHUB_ENV
+
     - name: Terraform Init
       run: terraform init
 
