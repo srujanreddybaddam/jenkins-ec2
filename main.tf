@@ -4,7 +4,7 @@ provider "aws" {
 
 resource "aws_instance" "ec2_instance" {
     
-    ami = "ami-09694bfab577e90b0"
+    ami = "ami-0d0f28110d16ee7d6"
     instance_type = "t2.micro"
     availability_zone = "us-east-2a"
     associate_public_ip_address = true
